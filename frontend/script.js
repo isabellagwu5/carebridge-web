@@ -1,4 +1,4 @@
-import { searchCmsPractitioners, searchClinics, zocdocIntegrationStatus } from "./api.js";
+import { searchCmsPractitioners, searchClinics} from "./api.js";
 
 const $ = id => document.getElementById(id);
 const keys = ["visit-reason", "medications", "allergies", "questions"];
