@@ -117,11 +117,6 @@ $("provider-search").addEventListener("submit",async(e)=>{
   }
  }catch(err){text($("result-count"),`Search unavailable: ${err.message}`);}
 });
-$("check-zocdoc").addEventListener("click",async()=>{
- text($("zocdoc-status"),"Checking partner connection...");
- try {const status=await zocdocIntegrationStatus();text($("zocdoc-status"),status.message||"No connection details available.");}
- catch(err){text($("zocdoc-status"),err.message);}
-});
 $("passport-consent").addEventListener("change",()=>{
  $("passport-fields").disabled=!$("passport-consent").checked;
  if(!$("passport-consent").checked) deleteNotes();
